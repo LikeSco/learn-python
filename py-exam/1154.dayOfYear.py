@@ -13,10 +13,10 @@ class Solution:
         year = int(arr[0])
         month = int(arr[1])
         day = int(arr[2])
-        dic = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        dic_day = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         if year % 400 == 0 or year % 4 == 0 and year % 100 != 0:
-            dic[1] = 29
-        return sum(dic[:month - 1]) + day
+            dic_day[1] = 29
+        return sum(dic_day[:month - 1]) + day
 
 
 date = "2003-03-01"
